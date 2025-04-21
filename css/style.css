@@ -64,7 +64,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -709,12 +710,23 @@ header.sticky .nav-bar {
   position: relative;
   background: var(--modal-bg-color);
   max-width: 600px;
+  height: 80vh;
+  overflow-y: auto;
   margin: 20px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transform: translateY(-50px);
   transition: 0.5s ease;
+}
+
+.service-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.service-modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--second-color);
+  border-radius: 10px;
 }
 
 .service-modal.active .service-modal-body {
@@ -837,12 +849,23 @@ header.sticky .nav-bar {
   position: relative;
   background: var(--modal-bg-color);
   max-width: 600px;
+  height: 80vh;
+  overflow-y: auto;
   margin: 20px;
   padding: 40px;
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transform: translateY(-50px);
   transition: 0.5s ease;
+}
+
+.portfolio-model-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.portfolio-model-body::-webkit-scrollbar-thumb {
+  background-color: var(--second-color);
+  border-radius: 10px;
 }
 
 .porfolio-model.active .portfolio-model-body {
@@ -947,13 +970,20 @@ header.sticky .nav-bar {
   width: 100%;
 }
 
+.client-swiper {
+  position: relative;
+}
+
 .client-swiper .swiper-wrapper {
   margin-bottom: 30px;
 }
 
 .client-swiper .swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
-
   margin: 20px 0;
 }
 
@@ -999,8 +1029,20 @@ header.sticky .nav-bar {
 
 .swiper-button-next,
 .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--second-color);
   font-size: 3em;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
 }
 
 .swiper-pagination-bullet,
@@ -1110,6 +1152,20 @@ header.sticky .nav-bar {
   margin-top: 0;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.responsive-iframe-wrapper {
+  border-radius: 5px;
+  margin-left: -5%;
+}
+
+/* Iframe styles */
+.google-form-iframe {
+  width: 100%;
+  height: 850px;
+  border: none;
+  border-radius: 5px;
+  overflow-x: hidden;
 }
 
 /*=======Footer=======*/
@@ -1411,5 +1467,26 @@ footer a {
 
   .contact-card .contact-btn .btn {
     font-size: 0.8rem;
+  }
+
+  .service-modal-body {
+    height: 90vh;
+    padding: 20px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: auto;
+    bottom: -10px;
+    transform: none;
+    font-size: 2em;
+  }
+
+  .swiper-button-prev {
+    left: 30%;
+  }
+
+  .swiper-button-next {
+    right: 30%;
   }
 }
