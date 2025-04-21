@@ -1243,7 +1243,7 @@ footer a {
   }
 
   .nav-menu-btn {
-    background: url(../images/menu-btn.png) no-repeat;
+    background: url(../property/images/menu-btn.png) no-repeat;
     filter: var(--color-filter);
     background-size: 40px;
     background-position: center;
