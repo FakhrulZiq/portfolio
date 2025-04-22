@@ -257,6 +257,14 @@ header.sticky .nav-bar {
   color: var(--hover-color);
 }
 
+body.dark-theme .home-container .media-icons a {
+  color: #ffffff;
+}
+
+body.dark-theme .home-container .media-icons a:hover {
+  color: #cccccc;
+}
+
 .home-container .info h2 {
   font-size: 4em;
   font-weight: 600;
@@ -716,7 +724,7 @@ header.sticky .nav-bar {
   position: relative;
   background: var(--modal-bg-color);
   max-width: 600px;
-  height: 80vh;
+  max-height: 80vh;
   overflow-y: auto;
   margin: 20px;
   padding: 40px;
@@ -740,11 +748,15 @@ header.sticky .nav-bar {
 }
 
 .service-modal-body .modal-close-btn {
-  position: absolute;
+  position: sticky;
   top: 0;
-  right: 0;
-  margin: 20px;
+  margin-left: auto;
+  display: block;
+  width: fit-content;
+  background-color: var(--modal-bg-color);
+  z-index: 10;
   cursor: pointer;
+  font-size: 1.5em;
 }
 
 .service-modal-body h3 {
@@ -879,11 +891,17 @@ header.sticky .nav-bar {
 }
 
 .portfolio-close-btn {
-  position: absolute;
+  position: sticky;
   top: 0;
-  right: 0;
-  margin: 20px;
+  left: 100%;
+  margin-left: auto;
+  display: block;
+  width: fit-content;
+  background-color: var(--modal-bg-color);
+  z-index: 10;
   cursor: pointer;
+  font-size: 1.5em;
+  align-self: flex-end;
 }
 
 .portfolio-model-body h3 {
@@ -891,9 +909,29 @@ header.sticky .nav-bar {
 }
 
 .portfolio-model-body img {
-  width: 100%;
-  margin: 20px 0;
-  border-radius: 10px;
+  width: 70%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10%;
+}
+
+.portfolio-action-btn {
+  margin: 20px auto 0; 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--second-color);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio-action-btn:hover {
+  background-color: var(--hover-color);
 }
 
 /*=======Get-in-touct=======*/
