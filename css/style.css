@@ -292,6 +292,12 @@ header.sticky .nav-bar {
   background: var(--hover-color);
 }
 
+.profile-img {
+  height: 400px;
+  width: auto;
+  border-radius: 10%;
+}
+
 .home-container .home-img {
   position: relative;
 }
@@ -1438,13 +1444,18 @@ footer a {
     display: grid;
   }
 
+  .profile-img {
+    width: 200px;
+    height: auto;
+  }
+
   .home-container .home-img {
     position: absolute;
   }
 
   .home-container .home-img img {
     width: 65%;
-    transform: translate(80px, -180px);
+    transform: translate(80px, -220px);
   }
 
   .home.home-container .info {
