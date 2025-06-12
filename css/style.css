@@ -301,13 +301,19 @@ body.dark-theme .home-container .media-icons a:hover {
 }
 
 .profile-img {
-  height: 400px;
-  width: auto;
+  width: 100%;
+  height: auto;
+  max-height: 500px;
   border-radius: 10%;
+  object-fit: contain; 
+  aspect-ratio: 1/1; 
 }
 
 .home-container .home-img {
   position: relative;
+  width: 100%;
+  max-width: 400px; 
+  margin-left: 40px;
 }
 
 .home-container .home-img img {
@@ -1493,7 +1499,7 @@ footer a {
 
   .home-container .home-img img {
     width: 65%;
-    transform: translate(80px, -220px);
+    transform: translate(80px, -80px);
   }
 
   .home.home-container .info {
